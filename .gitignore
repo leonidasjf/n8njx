@@ -1,0 +1,49 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Ambientes virtuais
+.env
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+*.env
+
+# Logs e temporários
+*.log
+logs/
+tmp/
+temp/
+
+# IDEs e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Build / saída
+dist/
+build/
+*.out
+*.exe
+*.app
+
+# Arquivos gerados
+*.pdf
+*.html
+*.mp3
+*.wav
+*.flac
+
+# Relatórios e cache
+relatorios/
+.cache/
