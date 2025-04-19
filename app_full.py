@@ -12,10 +12,42 @@ from faster_whisper import WhisperModel
 import ffmpeg
 from pathlib import Path
 import webbrowser
+from tkinter import Tk, filedialog
 
+# ============ CONFIGURAÇÕES ============
 load_dotenv()
 genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
 
+# ============ UI ============
+st.set_page_config(page_title="Auditor Jettax - Full", layout="wide")
+st.title("🧠 Auditoria Inteligente de Reuniões - Jettax")
+
+modelo_whisper = st.selectbox("🧠 Modelo do Whisper", ["tiny", "base", "small", "medium", "large"])
+tipo_dispositivo = st.radio("💻 Dispositivo", ["cpu", "cuda"], horizontal=True)
+default_cudnn_path = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin"
+cudnn_path = st.text_input("📁 Caminho do cuDNN (para uso com GPU)", value=default_cudnn_path)
+os.environ["PATH"] += f";{cudnn_path}"
+
+# Selecionar pasta via explorador
+st.markdown("### 🗂️ Pasta de destino")
+if st.button("📂 Selecionar pasta de saída"):
+    root = Tk()
+    root.withdraw()
+    folder = filedialog.askdirectory()
+    root.destroy()
+    if folder:
+        st.session_state['output_dir'] = folder
+output_dir = st.session_state.get('output_dir', str(Path.cwd()))
+st.info(f"Pasta atual selecionada: `{output_dir}`")
+
+# Carregar vídeo
+video_path = st.file_uploader("🎞️ Selecione o vídeo da reunião", type=["mp4", "mp3", "wav"])
+
+# Prompt customizado
+st.markdown("### ✏️ Prompt de Análise (personalizado - substitui o padrão, não recomendado):")
+custom_prompt = st.text_area("Prompt (opcional):", placeholder="Deixe em branco para usar o prompt padrão.", height=150)
+
+# ============ GERAÇÃO ============
 def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: Path):
     conteudo_formatado = conteudo.replace("\n", "<br>")
     html_template = f"""<!DOCTYPE html>
@@ -89,31 +121,7 @@ def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: 
         f.write(html_template)
     return output_path
 
-# Interface do Streamlit
-st.set_page_config(page_title="Auditor Jettax - Full", layout="wide")
-st.title("🧠 Auditoria Inteligente de Reuniões - Jettax")
-
-# Seleção de modelo Whisper e tipo de dispositivo
-modelo_whisper = st.selectbox("🧠 Modelo do Whisper", ["tiny", "base", "small", "medium", "large"])
-tipo_dispositivo = st.radio("💻 Dispositivo", ["cpu", "cuda"], horizontal=True)
-
-# Caminho do cuDNN (editável)
-default_cudnn_path = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin"
-cudnn_path = st.text_input("📁 Caminho do cuDNN (para uso com GPU)", value=default_cudnn_path)
-os.environ["PATH"] += f";{cudnn_path}"
-
-# Inicialização de modelo e indexador
-model = genai.GenerativeModel(model_name="gemini-1.5-pro")
-ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
-client = chromadb.Client()
-collection = client.get_or_create_collection(name="reunioes_auditadas", embedding_function=ef)
-
-# Inputs principais
-video_path = st.file_uploader("🎞️ Selecione o vídeo da reunião", type=["mp4", "mp3", "wav"])
-output_dir = st.text_input("📂 Pasta de saída para transcrição e relatório", value=str(Path.cwd()))
-st.markdown("### ✏️ Prompt de Análise (personalizado - substitui o padrão, não recomendado):")
-custom_prompt = st.text_area("Prompt (opcional):", placeholder="Deixe em branco para usar o prompt padrão.", height=150)
-
+# ============ LÓGICA PRINCIPAL ============
 if st.button("🚀 Iniciar Análise Completa"):
     if not video_path:
         st.warning("Selecione um vídeo primeiro.")
@@ -121,10 +129,13 @@ if st.button("🚀 Iniciar Análise Completa"):
         progress = st.progress(0)
         status = st.empty()
 
-        filename = Path(video_path.name).stem
+        filename_base = Path(video_path.name).stem
+        prefixo = f"reuniao-{filename_base}"
         output_dir_path = Path(output_dir)
         output_dir_path.mkdir(parents=True, exist_ok=True)
-        audio_path = output_dir_path / f"{filename}.wav"
+
+        audio_path = output_dir_path / f"{prefixo}.wav"
+        trans_path = output_dir_path / f"{prefixo}.txt"
 
         status.text("🎧 Extraindo áudio do vídeo...")
         with tempfile.NamedTemporaryFile(delete=False) as tmp:
@@ -137,12 +148,12 @@ if st.button("🚀 Iniciar Análise Completa"):
         model_whisper = WhisperModel(modelo_whisper, device=tipo_dispositivo, compute_type="float32")
         segments, _ = model_whisper.transcribe(str(audio_path), beam_size=5)
         transcricao = "\n".join([seg.text for seg in segments])
-        trans_path = output_dir_path / f"{filename}.txt"
         with open(trans_path, "w", encoding="utf-8") as f:
             f.write(transcricao)
         progress.progress(30)
 
         status.text("🤖 Gerando relatório com Gemini...")
+        model = genai.GenerativeModel(model_name="gemini-1.5-pro")
         prompt_final = custom_prompt if custom_prompt.strip() else f"""
 Você é um auditor sênior de Customer Success. Com base na transcrição a seguir, gere um relatório com:
 
@@ -167,16 +178,19 @@ Não inclua cabeçalhos com nome do cliente ou data da reunião.
         progress.progress(60)
 
         status.text("📄 Salvando relatório em HTML...")
-        html_path = gerar_html_jettax(resposta, f"Reunião analisada - {filename}", filename, output_dir_path)
+        html_path = gerar_html_jettax(resposta, f"Reunião analisada - {filename_base}", prefixo, output_dir_path)
         progress.progress(80)
 
         status.text("🔎 Indexando para perguntas inteligentes...")
+        ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
+        client = chromadb.Client()
+        collection = client.get_or_create_collection(name="reunioes_auditadas", embedding_function=ef)
         blocos = [p.strip() for p in transcricao.split("\n\n") if len(p.strip()) > 20]
         for idx, trecho in enumerate(blocos):
             collection.upsert(
                 documents=[trecho],
-                metadatas=[{"origem": filename}],
-                ids=[f"{filename}_{idx}"]
+                metadatas=[{"origem": filename_base}],
+                ids=[f"{filename_base}_{idx}"]
             )
         progress.progress(100)
 
@@ -185,7 +199,7 @@ Não inclua cabeçalhos com nome do cliente ou data da reunião.
         if st.button("📂 Abrir relatório gerado"):
             webbrowser.open(str(html_path))
 
-# Sessão para perguntas
+# ============ PERGUNTAS ============
 st.divider()
 st.markdown("### ❓ Perguntar sobre a reunião")
 pergunta = st.text_input("Digite sua pergunta:")
