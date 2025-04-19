@@ -89,17 +89,28 @@ def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: 
         f.write(html_template)
     return output_path
 
+# Interface do Streamlit
 st.set_page_config(page_title="Auditor Jettax - Full", layout="wide")
 st.title("🧠 Auditoria Inteligente de Reuniões - Jettax")
 
+# Seleção de modelo Whisper e tipo de dispositivo
+modelo_whisper = st.selectbox("🧠 Modelo do Whisper", ["tiny", "base", "small", "medium", "large"])
+tipo_dispositivo = st.radio("💻 Dispositivo", ["cpu", "cuda"], horizontal=True)
+
+# Caminho do cuDNN (editável)
+default_cudnn_path = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin"
+cudnn_path = st.text_input("📁 Caminho do cuDNN (para uso com GPU)", value=default_cudnn_path)
+os.environ["PATH"] += f";{cudnn_path}"
+
+# Inicialização de modelo e indexador
 model = genai.GenerativeModel(model_name="gemini-1.5-pro")
 ef = embedding_functions.SentenceTransformerEmbeddingFunction(model_name="all-MiniLM-L6-v2")
 client = chromadb.Client()
 collection = client.get_or_create_collection(name="reunioes_auditadas", embedding_function=ef)
 
+# Inputs principais
 video_path = st.file_uploader("🎞️ Selecione o vídeo da reunião", type=["mp4", "mp3", "wav"])
 output_dir = st.text_input("📂 Pasta de saída para transcrição e relatório", value=str(Path.cwd()))
-
 st.markdown("### ✏️ Prompt de Análise (personalizado - substitui o padrão, não recomendado):")
 custom_prompt = st.text_area("Prompt (opcional):", placeholder="Deixe em branco para usar o prompt padrão.", height=150)
 
@@ -122,8 +133,8 @@ if st.button("🚀 Iniciar Análise Completa"):
         ffmpeg.input(tmp_path).output(str(audio_path), ac=1, ar='16k').run(overwrite_output=True, quiet=True)
         progress.progress(10)
 
-        status.text("📝 Transcrevendo com Whisper...")
-        model_whisper = WhisperModel("tiny", device="cpu", compute_type="float32")
+        status.text(f"📝 Transcrevendo com Whisper ({modelo_whisper} - {tipo_dispositivo})...")
+        model_whisper = WhisperModel(modelo_whisper, device=tipo_dispositivo, compute_type="float32")
         segments, _ = model_whisper.transcribe(str(audio_path), beam_size=5)
         transcricao = "\n".join([seg.text for seg in segments])
         trans_path = output_dir_path / f"{filename}.txt"
@@ -152,7 +163,6 @@ A resposta deve ser formatada com títulos destacados, claros, usando <strong> p
 Não deve haver sugestões como "envolver desenvolvimento" ou ações que não são de alçada do time de CS.
 Não inclua cabeçalhos com nome do cliente ou data da reunião.
 """
-
         resposta = model.generate_content(f"{prompt_final}\n\nTranscrição:\n{transcricao}").text
         progress.progress(60)
 
@@ -175,6 +185,7 @@ Não inclua cabeçalhos com nome do cliente ou data da reunião.
         if st.button("📂 Abrir relatório gerado"):
             webbrowser.open(str(html_path))
 
+# Sessão para perguntas
 st.divider()
 st.markdown("### ❓ Perguntar sobre a reunião")
 pergunta = st.text_input("Digite sua pergunta:")
