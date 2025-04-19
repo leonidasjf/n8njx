@@ -12,42 +12,43 @@ from faster_whisper import WhisperModel
 import ffmpeg
 from pathlib import Path
 import webbrowser
-from tkinter import Tk, filedialog
 
-# ============ CONFIGURAÇÕES ============
+# ======== Carregar chave da API via .env ========
 load_dotenv()
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
+api_key = os.getenv("GOOGLE_API_KEY")
 
-# ============ UI ============
 st.set_page_config(page_title="Auditor Jettax - Full", layout="wide")
 st.title("🧠 Auditoria Inteligente de Reuniões - Jettax")
 
-modelo_whisper = st.selectbox("🧠 Modelo do Whisper", ["tiny", "base", "small", "medium", "large"])
+if not api_key:
+    st.error("Chave da API do Google não encontrada no .env. Configure GOOGLE_API_KEY.")
+    st.stop()
+
+# Configurar Gemini
+genai.configure(api_key=api_key)
+
+# ============ Interface: Dispositivo e Pasta ============
 tipo_dispositivo = st.radio("💻 Dispositivo", ["cpu", "cuda"], horizontal=True)
-default_cudnn_path = r"C:\Program Files\NVIDIA GPU Computing Toolkit\CUDA\v12.8\bin"
+if tipo_dispositivo == "cuda":
+    st.warning("⚠️ Para usar GPU, é necessário ter o CUDA Toolkit e cuDNN instalados corretamente.")
+
+default_cudnn_path = r"C:\\Program Files\\NVIDIA GPU Computing Toolkit\\CUDA\\v12.8\\bin"
 cudnn_path = st.text_input("📁 Caminho do cuDNN (para uso com GPU)", value=default_cudnn_path)
 os.environ["PATH"] += f";{cudnn_path}"
 
-# Selecionar pasta via explorador
-st.markdown("### 🗂️ Pasta de destino")
-if st.button("📂 Selecionar pasta de saída"):
-    root = Tk()
-    root.withdraw()
-    folder = filedialog.askdirectory()
-    root.destroy()
-    if folder:
-        st.session_state['output_dir'] = folder
-output_dir = st.session_state.get('output_dir', str(Path.cwd()))
+output_dir = st.text_input("📂 Caminho da pasta de saída", value=str(Path.cwd()))
+output_dir_path = Path(output_dir)
+output_dir_path.mkdir(parents=True, exist_ok=True)
 st.info(f"Pasta atual selecionada: `{output_dir}`")
 
-# Carregar vídeo
-video_path = st.file_uploader("🎞️ Selecione o vídeo da reunião", type=["mp4", "mp3", "wav"])
+video_file_path = st.text_input("🎞️ Caminho completo do vídeo da reunião", value="")
+if not Path(video_file_path).exists():
+    st.warning("Caminho inválido ou arquivo não encontrado.")
 
-# Prompt customizado
 st.markdown("### ✏️ Prompt de Análise (personalizado - substitui o padrão, não recomendado):")
 custom_prompt = st.text_area("Prompt (opcional):", placeholder="Deixe em branco para usar o prompt padrão.", height=150)
 
-# ============ GERAÇÃO ============
+# ============ Função HTML ============
 def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: Path):
     conteudo_formatado = conteudo.replace("\n", "<br>")
     html_template = f"""<!DOCTYPE html>
@@ -56,51 +57,14 @@ def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: 
       <meta charset='UTF-8'>
       <title>{titulo}</title>
       <style>
-        body {{
-          font-family: 'Segoe UI', sans-serif;
-          background-color: #F5F7FA;
-          color: #1A1F71;
-          padding: 40px;
-        }}
-        header {{
-          text-align: center;
-          margin-bottom: 40px;
-        }}
-        header img {{
-          max-width: 250px;
-        }}
-        h1 {{
-          color: #00AEEF;
-          margin-top: 10px;
-          font-size: 28px;
-        }}
-        h2, h3, strong {{
-          font-size: 22px;
-          font-weight: bold;
-        }}
-        section {{
-          background: white;
-          padding: 30px;
-          border-radius: 10px;
-          box-shadow: 0 0 10px rgba(0,0,0,0.1);
-          font-size: 18px;
-        }}
-        .btn {{
-          display: inline-block;
-          margin-top: 30px;
-          padding: 10px 20px;
-          background-color: #1A1F71;
-          color: white;
-          text-decoration: none;
-          border-radius: 5px;
-        }}
-        .conclusao {{
-          margin-top: 40px;
-          padding: 20px;
-          background-color: #e0f7fa;
-          border-left: 5px solid #00acc1;
-          font-weight: bold;
-        }}
+        body {{ font-family: 'Segoe UI', sans-serif; background-color: #F5F7FA; color: #1A1F71; padding: 40px; }}
+        header {{ text-align: center; margin-bottom: 40px; }}
+        header img {{ max-width: 250px; }}
+        h1 {{ color: #00AEEF; margin-top: 10px; font-size: 28px; }}
+        h2, h3, strong {{ font-size: 22px; font-weight: bold; }}
+        section {{ background: white; padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.1); font-size: 18px; }}
+        .btn {{ display: inline-block; margin-top: 30px; padding: 10px 20px; background-color: #1A1F71; color: white; text-decoration: none; border-radius: 5px; }}
+        .conclusao {{ margin-top: 40px; padding: 20px; background-color: #e0f7fa; border-left: 5px solid #00acc1; font-weight: bold; }}
       </style>
     </head>
     <body>
@@ -121,31 +85,26 @@ def gerar_html_jettax(conteudo: str, titulo: str, nome_arquivo: str, salvar_em: 
         f.write(html_template)
     return output_path
 
-# ============ LÓGICA PRINCIPAL ============
+# ============ Execução Principal ============
 if st.button("🚀 Iniciar Análise Completa"):
-    if not video_path:
-        st.warning("Selecione um vídeo primeiro.")
+    if not Path(video_file_path).exists():
+        st.warning("Arquivo de vídeo inválido ou não encontrado.")
     else:
         progress = st.progress(0)
         status = st.empty()
 
-        filename_base = Path(video_path.name).stem
+        filename_base = Path(video_file_path).stem
         prefixo = f"reuniao-{filename_base}"
-        output_dir_path = Path(output_dir)
-        output_dir_path.mkdir(parents=True, exist_ok=True)
 
         audio_path = output_dir_path / f"{prefixo}.wav"
         trans_path = output_dir_path / f"{prefixo}.txt"
 
         status.text("🎧 Extraindo áudio do vídeo...")
-        with tempfile.NamedTemporaryFile(delete=False) as tmp:
-            tmp.write(video_path.read())
-            tmp_path = tmp.name
-        ffmpeg.input(tmp_path).output(str(audio_path), ac=1, ar='16k').run(overwrite_output=True, quiet=True)
+        ffmpeg.input(video_file_path).output(str(audio_path), ac=1, ar='16k').run(overwrite_output=True, quiet=True)
         progress.progress(10)
 
-        status.text(f"📝 Transcrevendo com Whisper ({modelo_whisper} - {tipo_dispositivo})...")
-        model_whisper = WhisperModel(modelo_whisper, device=tipo_dispositivo, compute_type="float32")
+        status.text(f"📝 Transcrevendo com Whisper (base - {tipo_dispositivo})...")
+        model_whisper = WhisperModel("base", device=tipo_dispositivo, compute_type="float32")
         segments, _ = model_whisper.transcribe(str(audio_path), beam_size=5)
         transcricao = "\n".join([seg.text for seg in segments])
         with open(trans_path, "w", encoding="utf-8") as f:
@@ -164,14 +123,39 @@ Você é um auditor sênior de Customer Success. Com base na transcrição a seg
 5. Oportunidades reais de melhoria
 6. Recomendação objetiva
 
-Ao final, conclua com uma das 4 categorias (e apenas uma):
-- Possui pontos de Atenção – Acionar Fluxo Manter Acompanhamento e Notificar Analista – Playbook Acionado.
-- Risco Alto – Possui Risco Alto de Churn – Notificar Liderança. Playbook Acionado.
-- Sem Risco – Não notificar.
-- Reunião Exemplar – Notificar Liderança Para Feedback Positivo.
+Ao final, conclua com uma das 4 categorias possíveis (e somente uma). Use exclusivamente as evidências comportamentais, verbais e operacionais presentes na transcrição. NÃO chute — justifique a escolha com base em frases reais ditas pelo cliente.
+
+🟡 Possui pontos de Atenção
+Use esta categoria se:
+- Há frustração, críticas ou dúvidas persistentes.
+- O cliente demonstra esforço para continuar usando a solução.
+- O tom é de alerta, mas ainda há colaboração e abertura.
+- Há falhas operacionais com impacto, mas o cliente está engajado.
+Exemplo: "Estamos tendo dificuldades com isso, mas vamos continuar testando."
+
+🔴 Risco Alto – Possui risco real de churn
+Use esta categoria SOMENTE se:
+- O cliente cita intenção de encerrar, cancelar, trocar sistema, parar de usar.
+- O tom é de ruptura, desinteresse ou abandono iminente.
+- Há perda de confiança declarada ou abandono do suporte.
+Exemplo: "Estamos pensando em parar de usar." / "Vamos fazer por fora mesmo."
+
+🟢 Sem Risco
+Use esta categoria se:
+- Não há reclamações, críticas ou frustrações.
+- O cliente está satisfeito e o fluxo de uso segue estável.
+- Não foram detectados riscos técnicos, operacionais ou emocionais.
+Exemplo: "Está tudo certo, vamos seguir assim."
+
+🟩 Reunião Exemplar
+Use esta categoria se:
+- O cliente elogia espontaneamente o atendimento ou a ferramenta.
+- A reunião foi colaborativa, produtiva e com feedback positivo.
+- Foram citados ganhos, melhorias ou satisfação clara.
+Exemplo: "Queria parabenizar vocês, está funcionando muito bem."
 
 A resposta deve ser formatada com títulos destacados, claros, usando <strong> para destacar os títulos no HTML.
-Não deve haver sugestões como "envolver desenvolvimento" ou ações que não são de alçada do time de CS.
+Não deve haver sugestões como \"envolver desenvolvimento\" ou ações que não são de alçada do time de CS.
 Não inclua cabeçalhos com nome do cliente ou data da reunião.
 """
         resposta = model.generate_content(f"{prompt_final}\n\nTranscrição:\n{transcricao}").text
@@ -199,7 +183,7 @@ Não inclua cabeçalhos com nome do cliente ou data da reunião.
         if st.button("📂 Abrir relatório gerado"):
             webbrowser.open(str(html_path))
 
-# ============ PERGUNTAS ============
+# ============ Perguntas ============
 st.divider()
 st.markdown("### ❓ Perguntar sobre a reunião")
 pergunta = st.text_input("Digite sua pergunta:")

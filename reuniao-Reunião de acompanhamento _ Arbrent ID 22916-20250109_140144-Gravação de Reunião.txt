@@ -1,0 +1,428 @@
+ A aula está conseguindo ver a gente?
+ Foi?
+ Não, Paulo, já tinha iniciado aqui o seu Rodrigo, que acompanha a gente no G-Tax.
+ O G-Tax?
+ O G-Tax, Paulo.
+ A Paulo vai representando o pessoal lá do prevenção, que faz o módulo do prevenção.
+ A gente vai tirar algumas sobre módulo do prevenção e o g-Tax do geral hoje.
+ Perfeito.
+ Eu estava perguntando para ele, Paulo, a questão dos acessos lá do ECAC, que a gente tinha comentado mais cedo.
+ Só para poder deixar um pouco mais claro.
+ Então, realmente corre o risco do G-Tax fazer o acesso humano, né?
+ Que aquele acesso dos 15, do golvbr, do ECAC.
+ Isso, ele vai acessar por ali, tá? Porque quando o ECAC faz o acesso, querendo não é o acesso robótico.
+ Mas é o passo a passo ali do acesso humano, tá?
+ Então se o ECAC estiver fazendo o acesso ali.
+ De 15 empresas ali no mesmo instante, pode ser que bloqueie para você, sim.
+ O acesso ali no golv.
+ Comprende. Eu consigo fazer alguma forma de lidar, te vai. Isso, pelo menos, durante o dia.
+ Ou eu teria que excluir o certificado de fato.
+ Isso, no caso, para você mudar esse acesso só excluindo ali, né?
+ Ou desvinculando ali os clientes, tá?
+ Não tem de.
+ Então o que você poderia estar fazendo ali, que seria uma opção.
+ Por exemplo, quando vocês entram ali no escritório, você vai lá e desvincula.
+ E quando vocês vão sair do escritório, você vincula novamente os clientes e salva.
+ Mas fazendo desta forma também pode correr risco de algumas informações não rodar dentro da G-Tax.
+ Não tem de.
+ No conta do horário também ali vai ter algumas informações que podem não estar subindo para a G-Tax, por conta disso.
+ Não tem de.
+ Antes eu tinha vindo aqui em predenciais.
+ E eu exclui aqui, tanto que eu já até disse nem um novo certificado.
+ Tem um principal, tem um outro, tá sem nenhum vínculo que foi só um teste que eu fiz.
+ Mas eu tinha vindo aqui e excluído esse certificado aqui.
+ A partir do momento que eu exclui esse certificado, ele já para de fazer as consultas, certo?
+ E isso, se você excluir o certificado, sim.
+ Ok.
+ No caso, isso ainda tá ativo, né?
+ Isso, eu coloquei ele de volta até coloquei o nosso secundário aqui para poder fazer uns testes com ele depois.
+ Certo.
+ E isso você excluindo e a plataforma já não vai ter mais acesso ali ao certificado e as procurações ali, tá?
+ Ok.
+ Ok.
+ Paulo, se você quiser começar pela modulo prevenção, que o meu é bem superficial hoje.
+ Eu queria saber se você sempre fez uma agendamento com o teste no mês passado,
+ e aí a gente colocou assim, fez um primeiro bloco, colocou 273 vezes.
+ E aí ele não faltou, porque ele falou que estava sem renda no caso.
+ Só que quando o Steven falou com a gente sobre a plataforma, ele falou que assim que a gente inclusive fez empresas,
+ a gente seria habilitada não soltar para todos os empresas.
+ E aí isso não aconteceu.
+ E aí depois informaram para a gente que seria fazer essa imploração em presa por empresas,
+ que entrar lá e habilizar a renda, e ficar que depois rodar a decedência.
+ Aí é a primeira questão.
+ Aí esse mês, a gente verificou também que rodou dia 6.
+ Só que assim, ele não me deixa pegar, por exemplo, só esse primeiro bloco de 273 empresas.
+ Certo, você quer compartilhar sua tela comigo para a gente dar uma olhadinha por a gente dele?
+ Eu tenho aqui o...
+ Aqui é o primeiro bloco de 176, que era para ele rodar todo dia 6 da DCS Web.
+ Só que a gente não está saindo com a DCS.
+ Mais passado, por exemplo, os 272 para rodar um quadro.
+ Certo, e aí é a outra dificuldade que a gente tenha de ir no relatório
+ e poder filtrar aqui, por exemplo, ter a setinha aqui na regola a gente,
+ quando vai pesquido às vezes a DCS do Web.
+ De ter uma setinha que eu posso selecionar só o primeiro bloco,
+ se eu tenho certeza de quais empresas rodarem, quais não.
+ Certo, pelo agenda é porque assim, o agendamento é para você colocar as empresas, tá?
+ E o filtro realmente vai ser algo totalmente diverso.
+ Você não vai conseguir filtrar para buscar ali somente pelaquele bloco, tá?
+ Realmente ele vai aparecer para você ali estar a genteira
+ e você vai ter que olhar os clientes ali,
+ ele não vai aparecer somente o bloco que está no agendamento, tá?
+ Ele não tem esse filtro para você conseguir filtrar
+ somente pelo bloco do primeiro agendamento.
+ Esse vai ser um ponto que realmente a plataforma não vai ter como filtrar desta forma.
+ Só em que rompendo uma questão, ali no, por exemplo,
+ quando a gente agenda para fazer o download,
+ ele me traz um relatório das empresas que ele conseguiu capturar a nota
+ e as que por aventura apresentar um erro.
+ Para essa transmissão da TCTF WebT, e esse relatório?
+ Ela...
+ Acho que seria bem esse aqui.
+ Ela consegue acompanhar assim, mas ela não consegue filtrar pelo bloco do agendamento.
+ Entendi.
+ Igual, por exemplo, no agendamento lá, ela fez um bloco só para 278 empresas.
+ Ela não vai ter como filtrar no relatório ou pela plataforma,
+ só aquelas 278 empresas.
+ Ele vai trazer num total, e aí ela vai ter que acompanhar ali
+ para ver quais são as empresas daquele bloco mesmo, tá?
+ Então, para poder acompanhar, só fazer a nossa cortação mesmo do programa.
+ E aí, a gente está tendo muitas coisas com ele.
+ Esse aqui é o filtro aí só um dia.
+ Esse dia, sei-se, aqui que era pra gente ver.
+ E aí, muitas mãos não efetivaram.
+ Eu vou até abrir aqui pra ver se você até ajuda a gente até...
+ Isso, vamos ver como ela tinha. Qual é o erro que ela está apresentando lá na plataforma?
+ Aquela mão...
+ 18...
+ Deu erro aqui...
+ 1817...
+ Coloca essa três dígitos, Paula.
+ Mas eu acredito, seria o que eu entendi disso, tá?
+ Ah...
+ Aí...
+ Pode clicar em cima dela, isso...
+ Aí, aparentemente a gente não estava ali estabilitada.
+ E aí, eu não sei se foi por isso que ele não alzou.
+ Certo, você já chegou a enviar essa DCTF por fora?
+ Ou ainda não?
+ Certo, clica ali só pra fazer a sincronização.
+ Só pra gente ver se ele aparece alguma informação.
+ A atualiza a página ali perto da barinha de rolagem, por favor.
+ Assim, eu acho que ele voltou.
+ Aí, ela, novamente, em...
+ Em federal e apurações.
+ Ou serviços tanto faz, aí ele vai abrir da mesma forma ali.
+ Só sai dessa página e volta novamente.
+ Clica em qualquer uma outra página aleatória ali.
+ Isso e volta pra lá.
+ Tá, ele está atualizando.
+ Vamos ver se ele saiu desses status.
+ Ali pertinho da barra de rolagem, eu tenho uma setinha fazendo um círculo ali, ó, no lado direito.
+ E clica aí, por favor, vamos ver se ele atualiza.
+ Tá, ele vai ficar atualizando.
+ Se você tiver outras dúvidas pra gente vendo, depois a gente volta só pra ver se ele atualizou ou não.
+ Corrou só essa questão da linha, enfim, não está habilitada.
+ Não é isso que pode estar trabalhando aqui.
+ Certo, na verdade depende muito, né?
+ Porque vai ter empresa que vai ter só DCTF e vai ter empresa que vai ter só a linha, enfim.
+ Então, ele não vai interferir muito neste caso,
+ dela estar ou não habilitada, tá?
+ Então, a gente aqui, na verdade, a gente sempre tem a renda.
+ E por mais, se ela seja sem movimento, sempre vai ter pelo menos do período.
+ A primeira no período, né?
+ Certo, mas...
+ Depende da empresa ter um novo movimento, ela sempre vai ter um redisco vinte ou quarenta.
+ Tá.
+ Tá, mas nesse caso ele não traria esse erro em si, tá?
+ Se ele contatar o suporte ali.
+ Se ele tivesse alguma coisa vinculada à renda,
+ ele daria igual estar na renda.
+ Como não habilitado ali, não deixaria você mexer.
+ Mas se você quiser habilitar a renda, também você consegue fazer a entrega da renda,
+ mas não está vinculada a isso, tá?
+ Tá, então a DCTF ela anda solvindo.
+ Não precisa dessa vinculação da renda.
+ Ela é isso, ela é um modelo diferente.
+ Tanto que a DCTF web você ativa ela dentro de serviços, tá?
+ Abilitado todas.
+ A outra questão é que para a gente está sendo complicada a questão da atualização do relatório fiscal.
+ Todas, eu até abri esse vario de exemptos.
+ E todas elas, ó, dia 5, acho que o máximo que eu tenho em si atualização foi do dia 6.
+ Enfilemente para a gente, isso é muito muito, mas a gente precisa do relatório atualizar todos os dias.
+ O mais interessante que eu tenho em si é DC.
+ E aí teve uma que a própria abre, que ela está sem atualizar desde o dia 12 do 11.
+ E aí eu não sei qual é o motivo.
+ Se você entra em fim.
+ Fora do prazo.
+ O que seria fora do prazo?
+ Certo, fora do prazo é quando realmente ele não atualizou ali, tá?
+ Dentro do prazo de sete dias.
+ Que a gente tem um prazo ali até sete dias para fazer essa atualização dos relatórios, tá?
+ Então, como ele não fez essa atualização dentro do prazo, ele traz pra você ali a mensagem de fora do prazo.
+ E aí a gente tem que fazer uma abertura de chamada ali solicitando a nossa equipe técnica pra eles fazerem a atualização.
+ Que já passou o período e realmente não foi atualizado, tá?
+ Eu vou até deixar o notado nome dessa empresa aqui, que eu já faço a abertura de chamada pra vocês, tá?
+ Sobre esse ponto e peço ali pro técnico fazer uma avalidação pra entender o porquê que está fora do prazo e não foi atualizado ainda, tá?
+ E assim, quando entra esse prazo dos sete dias, a gente já fez essa.
+ Mas quando chega nesse prazo dos sete dias, ele não volta a pensar atualizar?
+ Sem era essa atendência, até sempre ele atualizar.
+ Por isso que ele traz ali aquela informação pra você fora do prazo ou dentro do prazo.
+ No caso dessa arbrente, eu não sei o motivo, só o time técnico mesmo consegue validar, que ele forço novamente e não atualizou.
+ Então por isso que a gente faz a abertura de chamada ali, tá?
+ Pro pessoal do desenvolvimento mesmo conseguiu entender o que ocorreu ali, pra ele não ter forçado e atualizado novamente, tá?
+ E referente ao primeiro ponto levantado ali.
+ Infelizmente o sistema ele tem mesmo até sete dias ali pra fazer essas atualizações, tá?
+ Então, raramente você vai ver a atualização da situação fiscal sendo atualizada diariamente.
+ É mais fácil ele atualizar uma vez por semana ali, que é o prazo que ele traz pra você, tá?
+ Se você voltar ali na plataforma, pode voltar ali na Gitax.
+ Desse a tela.
+ Mas essa tela mesmo pode descer isso.
+ Lá embaixo ele já traz pra você aqui o tempo médio de atualização é de sete dias, tá?
+ Não, é porque quando a gente enunciou com o programa, foi garantido pra gente que ali iria atualizar todo o dia de madrugada.
+ Que era pra quando a gente chegar, se tivesse, por exemplo, todo dia nove, a gente tivesse o telefone do dia nove, já soldou todo isso assim.
+ Isso foi bem prisado pra gente, essa prisa.
+ Terto, isso foi passado na implantação ou na venda mesmo?
+ Crepe na implantação, não consigo tirar certeza, mas eu acho que foi que na implantação.
+ Certo, é porque assim ele não vai ocorrer, tá? Pode ser que uma vez ou outra ele acabe atualizando,
+ mas você vê que a plataforma ela fez a bastante que o prazo é de até sete dias.
+ Porque depende da atualização do ECAC, depende do nosso roubou conseguir acesso, tá?
+ Então ele sempre tem esse prazo mesmo ali de até sete dias.
+ Ele dificilmente consegue atualizar todo dia.
+ Pode ver que se acredito que nenhum relatório ali ele tá sem percenta atualizado, né?
+ Sim.
+ Mas a atualidade é do dia 6, realmente, só que pra gente já não vale mais.
+ O dia 6, pra hoje, aconteceu já muito.
+ Já mudou muita coisa, né?
+ Mas no início do ano que tem o enquadramento ali do círculo, né?
+ Exatamente.
+ Sim.
+ A atualidade é de hora em hora, né?
+ Não tem como compiar com três dias atrás.
+ Sim, é infelizmente, não vai fazer, tá?
+ Tá.
+ Se você quiser voltar lá naquela empresa só pra gente ver se ele tá atualizando,
+ ainda ou se ele já mudou?
+ Enquanto a Paula dá uma olhada nisso, hein?
+ É só proentender um pouco melhor, Rodrigo.
+ Essa questão da atualização do prevenção, que eu não participei do treinamento,
+ mas só proentender como é que funciona essa plataforma,
+ pra gente poder pensar um pouco melhor aqui.
+ Ele faz uma busca automática através do roubou, certo?
+ Certo.
+ Ele seria mais ou menos aquela busca que ele faz dos dados da rein,
+ e da DCTF Web, porque tem empresas que mesmo que você não transmita por dentro do JTAC,
+ ele consegue recuperar essa informação, certo?
+ Certo.
+ Então a mesma situação de consulta.
+ Isso ali na DCTF e Web, por exemplo,
+ se você entregar ela por fora,
+ ele vai trazer ali na plataforma um relatório pra você da entrega, tá?
+ Sim, sim.
+ Isso aí vai perceber que ele fez em algumas empresas ali,
+ mesmo que quando a gente não estava operando,
+ ele estava recuperando alguns dados.
+ Existe alguma forma da gente programar,
+ a gente manipular esse número pra tipo assim,
+ pra que a consulta se torne mais frequente,
+ ou realmente é só quando a plataforma decide que vai fazer a consulta.
+ Da DCTF Web, você disse?
+ Não, da questão do relatório mesmo.
+ Do relatório do que?
+ Da DCTF Web ou daquela situação fiscal?
+ Situação fiscal.
+ Certo, não.
+ Aquela situação fiscal realmente é o que eu estava conversando, né?
+ Ela vai tentar fazer a atualização diariamente ali,
+ mas não é sempre que ele vai trazer.
+ Então todo dia ele vai rodar,
+ mas ele tem o prazo de até sete dias pra trazer ali pra vocês, tá?
+ Entendi.
+ Então não é algo que vocês conseguem programar,
+ ou está forçando ali pra ele trazer.
+ Entendi.
+ É como você falou assim,
+ ele tenta fazer todos os dias.
+ Nessa questão da tentativa,
+ ele faz alguma discriminação dos clientes,
+ tipo assim,
+ esse daqui tinha débito,
+ esse não tinha débito,
+ esse está saindo certidão,
+ não está saindo certidão,
+ existe algum algoritmo que faz ele fazer a tentativa da erro,
+ como isso funcionaria,
+ porque na minha cabeça,
+ se ele tenta fazer a consulta todos os dias
+ e ele conseguiu,
+ ele tinha que trazer um resultado, certo?
+ Isso, mas assim,
+ às vezes,
+ ele encontra a estabilidade ali do ECAC,
+ tá?
+ Tem até mesmo a estabilidade pra subir pra GTX,
+ porque a gente tem que acessar a base da ECAC,
+ ele vai fazer as buscas,
+ ele vai subir pra nossa base ali da nossa nuvem,
+ e da nossa nuvem,
+ ele passa pra GTX.
+ Então esse trâmito ali,
+ se ocorre alguma estabilidade,
+ ele acaba trazendo ali,
+ não fazendo no mesmo dia.
+ Entendi.
+ Então ele tem que prevar os passos até,
+ ele tem vários processos.
+ Isso, exatamente.
+ Ele tem processos ali
+ que ocorre em perita disponível pra vocês, tá?
+ Entendi.
+ Ele segue a estabilidade ali, né?
+ É, é, é, é.
+ Geralmente essas que tá ficando assim,
+ como atualizando,
+ eu tô tendo que fechar o sistema e abrir de novo
+ pra ver se ele muda a informação.
+ Na questão da erro,
+ eu tive esse problema.
+ Certo,
+ muitas vezes,
+ quando ele demora,
+ ele vai tratar de atualizar ali também,
+ acaba como concluído, né?
+ Ou ele tava,
+ ele tá voltando no erro.
+ Não, apresentando erro.
+ Voltando como um erro.
+ Não, não, não.
+ Deixa eu ver que tá mais aqui,
+ gente,
+ ele não saber ele também, ó?
+ Sim.
+ Tá.
+ Tá calando aqui.
+ Passou mal os elincima do erro novamente,
+ é o mesmo erro, certo é o mesmo erro, nesse caso eu vou fazer o seguinte, você pode
+ reprocessar ali atualizar e acompanhar, mas eu também vou fazer uma abertura de
+ chamado falando para o pessoal que quase 80% ali das empresas estão com erro de
+ DCTF, ébita, para eles poderem dar uma tensão ali também, fala, desculpa em
+ ter um pé, só ver se essas duas empresas que você consultou, se elas estão com
+ o certificado próprio, se elas estão por procuração, porque no mês passado eu tive um
+ problema com a Renf, que ele estava apresentando esse erro para entrar em
+ contato com um suporte, mas principalmente ocorreu nas empresas que não tinha
+ certificado, ele estava com problema de acessar a procuração, o EK aqui, isso ele
+ estava com muito problema, aqui vai em geral, lá em geral, e aí seleciona os
+ clientes para ver se eles estão com o certificado,
+ acessar o certificado, acessar sem,
+ também sem certificado, é isso também, realmente pode ser um ponto mesmo, né,
+ por conta do limite de acesso do EK, mas é o que acontece, ele tinha passado para
+ gente, até o próprio suporte, eu tinha entrado em contato com eles, que quando a
+ gente realiza esse tipo de agendamento, como se o sistema entendesse, que está
+ autorizado em vivo, e é para ele ficar reprocessando todos os viz, e isso não tá
+ acontecendo, esse reprocessamento diário não está acontecendo, ele apresenta esse erro,
+ se a gente não marcar para reprocessar, se a gente não o ir lá conferir e ficar
+ tentando atualizando toda hora, ele não envia, ele simplesmente não envia, é o que
+ acaba que a gente acaba fazendo por fora, certo, você sabe que a gente passou essa
+ informação ali de ele reprocessar o tomático, porque é assim a informação que
+ nós temos aqui do próprio pessoal do suporte, é que realmente quando ele dá o
+ erro, ele já vai ficar travado no erro e tem que fazer um reprocessamento,
+ igual nós fizemos ali, então por exemplo, se você for lá em agendamento, você vai
+ ver que em agendamento você é novamente uma sincronização, então as empresas
+ que voltam com o erro, você pode criar um agendamento para fazer em lote caso
+ não queira fazer em individual e colocá-la para sincronizar novamente, você
+ consegue dançar para a gente como é que seria essa questão de me fazer o
+ processamento em lote, claro, você quer compartilhar tela por favor?
+ Pode compartilhar aí, Paula?
+ Compartilhar minha?
+ Isso isso, que é aí para mostrar o agendamento às 172 e fazer o
+ reprocessamento das que deu erro, certo, pode ali em serviços, por favor,
+ agendamentos,
+ você pode ali em novo agendamento, vamos ver se deixa eu criar só o que já
+ tem ali, que ele já está com os dois e pode colocar em sincronizar
+ a DCTF web,
+ aí você pode colocar o dia, pode colocar por exemplo o dia 10 que ele roda nessa
+ madrugada do dia 9 pro dia 10, pode dar um novo agendamento, vamos ver como
+ ele aparece para a gente vincular os clientes, só colocar o nome ali, pode
+ colocar sincronismo de DCTF web, não tem problema,
+ pode, pode sim, e ele vai trazer os clientes ali, ver se aparecem os clientes que estão
+ no outro agendamento, eu acredito que ele vai aparecer aí sim,
+ o meu botão, só está pedindo só para sincronizar, a gente não está pedindo para fazer os dois,
+ ali, se quiser pelo nome ali em cima ou em buscar no canto esquerdo, isso pode
+ quiser pelo nome da empresa ali,
+ certo, então ele vai deixar porque a gente não está com os mesmos, então ali você pode
+ vincular tanto todas as empresas, como aquelas 287, eu não me engano para você
+ para o outro agendamento, e salvar para ele fazer sincronismo em not, na madrugada do dia 9 pro dia 10, tá?
+ A verdade, uma questão também que a gente tinha verificado é que ele não abadere esse blog, ele roda
+ sem cento, a gente agendou os 172, mas ele roda o sem cento, que é o 100%, eu acho que dos meus
+ clientes, é que assim, o blog, ele está ali para
+ transmetir, certo? Então assim, as que não tiverem no blog, o sistema ele vai atualizar no tempo dele,
+ ele vai fazer o sincronismo, mas ele não vai transmitir, tá? Então se ela não tiver nenhum erro ali,
+ foram uma DCTF 9 não está no blog, quando virar o mês ele automaticamente vai sincronizar, mas não
+ na data que você pediu, e ela vai ficar em aberto, ela não vai transmitir, pode reparar que
+ não está no blog, é que as que estão no blog, deram erro também, mas se tiver alguma que não está no
+ blog e sincronizou, você vai ver que ele vai ter a opção para você transmitir, ele não vai fazer essa
+ transmissão automática, se não tiver o agendamento, tá? Então é por isso que tem aquele agendamento de
+ sincronizar e transmitir, e esse novo que a gente está fazendo é para as empresas que deram erro, que
+ eu estava explicando anteriormente, as que deram erro ele não fica reprocessando para tentar sair do erro,
+ ele vai ficar ali até você tentar solucionar o erro, porque às vezes ele volta com erro de certificado,
+ de procuração ou algo do tipo, então ele vai ficar travado no erro, você criar um novo agendamento
+ do sincronismo, que é ao invés de você precisar ficar entrando uma ou uma reprocessana, você consegue
+ sincronizar todas novamente, e ver se o sistema vai após corrigir aqueles erros também, tá?
+ É uma pena que ele não reprocessa ir solrindo, porque daí a gente tem que esperar chegar no outro
+ dia para ver esse processo, que não é um processo, a encerizmente é a forma mais rápida, realmente é
+ instante, normalmente não mostra. Sim, e um ponto importante que o ramão até ressaltou é referente a
+ procuração mesmo, tá? Porque por exemplo, se a gente para assim para pensar um pouco assim,
+ no agendamento mesmo, se a gente colocar um agendamento com 278 empresas, o sistema vai fazer o
+ agendamento na madrugada, e ele já vai fazer o reprocessamento em lote, então ele vai tentar
+ reprocessar as 278 empresas de uma vez, e se for por procuração, ele vai conseguir acessar
+ algumas e outras vão retornar com erro por conta do acesso, tá? Então se vocês tiverem ali o
+ certificado digital da empresa mesmo e conseguia atualizar na plataforma, vai facilitar bastante
+ para vocês nesse ponto por conta desse bloqueio do ECAC de 15 acessos, aí ficaria mais fácil para
+ vocês conseguirem os acessos, ou colocar o código do simples nacional na plataforma, algo do tipo assim
+ que facilite a entrar ali na plataforma do ECAC mesmo, tá? Porque realmente esse bloqueio do ECAC
+ que ele está dificultando bastante esses reprocessamentos em lote.
+ A gente seria uma garantia, se a gente colocar assim certificado em 200 empresas na área
+ para garantir que as 200 empresas rodaria desse peço aí?
+ Sim, tem que rodar, tá? Porque aí não tem nenhum motivo para ter bloqueio, porque o ECAC não vai
+ bloquear porque é um certificado próprio da empresa, tá? Então ali tem que rodar a DCTF Web, se ele
+ torna com algum erro, a gente faz a abertura do chamado e o pessoal já consegue arrumar ali na hora também, tá?
+ E para o relatório fiscal, daria para dar essa garantia também, não?
+ Oi? Para o relatório fiscal?
+ Não, o relatório fiscal não, o relatório fiscal realmente é o que eu passei para vocês, como tem processos
+ a ser feito de acessar o ECAC, subir para base, subir para base da nuvem da GTACS e depois e para a plataforma,
+ realmente ele tem esse prazo de sete dias, tá? Não tem como a gente diminuir ali para ficar o prazo de um dia só,
+ é um prazo da plataforma mesmo por conta dos processos.
+ Ok, então da minha parte era aí, se eu vou acompanhar esse agendamento de amanhã, vou ver se roda essas outras empresas novamente e a gente
+ necessário abrir um chat amanhã.
+ Não, perfeito, antes de você abrir o chamado, pode me reportar também pelo WhatsApp, tá?
+ Que aí, aqui você abre o chamado, eu já vejo com o pessoal, se realmente é por conta do certificado ou não,
+ aí eu já consigo passar para você, tá?
+ Ah, perfeito, aí você me passa pelo WhatsApp que a gente vai acompanhando?
+ Abre, briga.
+ Eu quero agradecer sua atenção.
+ A minha questão, Rodrigo, era mais essa questão do certificado, né, de ele estar impactando nesses acessos,
+ a reinche, eu fiz ela manual, mas todas as que estavam com um certificado, foi sem nenhum problema, eu observei os problemas mais na que estavam com a
+ procuração mesmo, ele estava dando erro, e aí teve a situação do simple nacional, ainda estou fazendo os textes, eu falei que ia fazer alguns
+ entendamentos, alguns deram erro, outros não, só que o erro foi esse mesmo do acesse do certificado, então o que tá
+ impactando muito a gente tá sendo essa questão do acesse do certificado, o que é isso, uma dúvida, é que assim, no
+ o ECAC, ele bloqueia esse acesse, ele limita um acesse de 8 a 18, você saberia me dizer, teoricamente é para tá livre, após as 18 horas, esse acesse
+ o azetac se ela manda, essa confirmação após as 18 horas, ó, há 10 horas que ele manda essa transmissão, porque assim, se 10 horas não tem a
+ limitação de acesse por procuração, por que que ele está dando esse, esse retorno de erro, de limite de acesse, porque teoricamente não é
+ CAC, não tem um limite de acesse depois de 18, certo, é porque assim, o sistema, ele vai rodar de madrugada se tiver a
+ agendamento, tá, então se tiver algum agendamento ali, ele tem de rodar na madrugada assim, só que se ele encontra alguma estabilidade, ele vai rodando
+ no horário comercial também, então por exemplo, ele tentou acessar ele no ECAC, ele não conseguiu acessar na madrugada por alguma
+ estabilidade, por algum erro, por alguma informação que não tinha, então ele ficou pendente ali, por exemplo, de fazer o
+ fechamento daquele das, então o sistema ele sabe que ele tem que ficar tentando, porque ele não retornou com erro ainda, ele
+ tornou só com estabilidade, então quando virar o dia ele vai ficar tentando reprocessar durante o dia também, e aí ele vai
+ encontrar o erro da estabilidade, ele vai encontrar o erro do govinh, que aí não vai ser mais uma estabilidade, vai ser um erro, e aí ele vai
+ ali, então assim durante a madrugada ele tem a estabilidade, aí por exemplo vamos supor que oito horas ele já tentou fazer uma nova
+ acesso, aí deu o erro de acesso, porque não tem mais vaga suficiente, ele simplesmente trava naquele erro que ele não reprocessa,
+ e isso porque aí ele já voltou com erro fixo, ele não é mais, ele não foi uma tentativa que não deu certo, foi uma tentativa que já
+ retornou com erro, entende, e aí ele vai travar, beleza, ela, a minha parte também era mais isso mesmo, eu ainda estou terminando de fazer os testes dos
+ arrendamentos, ainda não tive assim nenhum problema nesse mês, o arrendo falou fluiu bem bastante até, não, perfeito, isso fica até ali para a Paula de alerta ali,
+ assim, se você conseguir fazer pelo certificado, né, arrendo, eu acho que vai ser o mesmo procedimento na DCTF Web com o certificado do
+ escritório, tá, porque aí ele não vai ter esse erro, ele vai conseguir, não vai ter esse entrave do IK aqui, né, no caso, então ele vai conseguir rodar ali com mais
+ facilidade mesmo, tá, mas aí se vocês tiverem alguma dúvida, você também, tá Ramon, os seus fechamentos ali, se aparecer algum erro diferente ali, você pode me
+ reportar, caiu já a sua análise aqui, veja o que está tratando ali, para poder posicionar vocês também, tá, beleza, referente a reunião, você quer deixar alguma outra reunião agendada, eu posso te mandar o link, tá, eu vou te mandar o link da minha
+ agenda ali no WhatsApp, e aí você mesmo consegue estar marcando as reuniões agora, tá, então se você vê uma necessidade ali de marcar a reunião, você já pode estar vindo
+ pra explorar o livro ali, tanto você quanta paula, fazendo esse agendamento, tá, não, beleza, então, porque por enquanto assim, pra mim tá falando bem tranquilo, as dúvidas estão sendo respondidas no WhatsApp, então por enquanto tá bem tranquilo, mas se a paula precisar, não, perfeito, aí eu passo lá pra vocês, tá bom, beleza, então, muito obrigado pela atenção de vocês,
+ a gente se matou de um ótimo final de semana, igualmente, obrigado, tchau, tchau, tchau, tchau, tchau
